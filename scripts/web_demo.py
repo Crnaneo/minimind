@@ -65,7 +65,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 system_prompt = []
-device = "cuda" if torch.cuda.is_available() else "cpu"
+device = 'mps' if torch.backends.mps.is_available() else 'cpu'
 
 
 def process_assistant_content(content):
